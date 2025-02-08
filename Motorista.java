@@ -1,14 +1,15 @@
-package Sistema_de_Logística_de_Transporte;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Motorista {
 	private String nome;
 	private String numeroCNH;
 	private String experiência;
+	private LocalDate dataCadastro;
 	private ArrayList<Veiculo> veiculos;
-	public Motorista(String nome, String numeroCNH, String experiência, boolean cadastroDia, ArrayList<Veiculo> veiculos) {
-		if(cadastroDia == true) {
+	public Motorista(String nome, String numeroCNH, String experiência, LocalDate dataCadastro, ArrayList<Veiculo> veiculos) {
+		if(dataCadastro.isAfter(LocalDate.now())) {
 			this.nome = nome;
 			this.numeroCNH = numeroCNH;
 			this.experiência = experiência;
@@ -36,6 +37,22 @@ public class Motorista {
 	public void setExperiência(String experiência) {
 		this.experiência = experiência;
 	}
+
+    public LocalDate getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public void setDataCadastro(LocalDate dataCadastro) {
+        this.dataCadastro = dataCadastro;
+    }
+
+    public ArrayList<Veiculo> getVeiculos() {
+        return veiculos;
+    }
+
+    public void setVeiculos(ArrayList<Veiculo> veiculos) {
+        this.veiculos = veiculos;
+    }
 	
 	
 }
