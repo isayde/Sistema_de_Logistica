@@ -1,16 +1,19 @@
-package Sistema_de_Logística_de_Transporte;
-
 public class Viagem {
 	private String origem;
 	private String destino;
 	private String data_Saída;
-	private String cargaTransportada;
-	public Viagem(String origem, String destino, String data_Saída, String cargaTransportada) {
+	private Carga cargaTransportada;
+	private Motorista motorista;
+	private Veiculo veiculo;
+
+	public Viagem(String origem, String destino, String data_Saída, Carga cargaTransportada, Motorista motorista, Veiculo veiculo) {
 		super();
 		this.origem = origem;
 		this.destino = destino;
 		this.data_Saída = data_Saída;
 		this.cargaTransportada = cargaTransportada;
+		this.motorista = motorista;
+		this.veiculo = veiculo;
 	}
 	public String getOrigem() {
 		return origem;
@@ -30,12 +33,31 @@ public class Viagem {
 	public void setData_Saída(String data_Saída) {
 		this.data_Saída = data_Saída;
 	}
-	public String getCargaTransportada() {
-		return cargaTransportada;
-	}
-	public void setCargaTransportada(String cargaTransportada) {
-		this.cargaTransportada = cargaTransportada;
-	}
+
+    public Carga getCargaTransportada() {
+        return cargaTransportada;
+    }
+
+    public void setCargaTransportada(Carga cargaTransportada) {
+        this.cargaTransportada = cargaTransportada;
+    }
+
+    public Motorista getMotorista() {
+        return motorista;
+    }
+
+    public void setMotorista(Motorista motorista) {
+        this.motorista = motorista;
+    }
+
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+    }
+	
 	
 	
 }
